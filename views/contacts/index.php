@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <div data-speed="0.25" data-type="media" data-url="<?= $page->getUploadUrl('image') ?>" class="rd-parallax-layer"></div>
         <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
             <div class="bg-overlay-darker">
-                <div class="shell section-34 section-md-100 section-lg-top-170 section-lg-bottom-165">
-                    <h1 class="veil reveal-md-inline-block">
+                <div class="shell section-100 section-md-100 section-lg-top-170 section-lg-bottom-165">
+                    <h1 class="reveal-md-inline-block">
                         <?= EliveWidget::widget([
                             'model' => $page->parts[0],
                             'attribute' => 'data',

@@ -14,8 +14,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <div data-speed="0.25" data-type="media" data-url="<?= $model->getUploadUrl('preview_img') ?>" class="rd-parallax-layer"></div>
         <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
             <div class="bg-overlay-darker">
-                <div class="shell section-34 section-md-60 section-lg-115">
-                    <h1 class="veil reveal-md-inline-block text-white"><?= $model->title ?></h1>
+                <div class="shell section-100 section-md-60 section-lg-115">
+                    <h1 class="reveal-md-inline-block text-white"><?= $model->title ?></h1>
                     <div class="offset-md-top-35">
                         <ul class="list-inline list-inline-dashed list-inline-dashed-sm text-small text-white">
                             <li class="text-uppercase"><span class="text-middle inset-left-10"><?= \Yii::$app->formatter->asDatetime($model->date, "php:d F Y "); ?></span></li>

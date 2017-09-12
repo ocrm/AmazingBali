@@ -19,9 +19,9 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
         <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
             <div class="shell">
                 <div class="range">
-                    <div class="range range-xs-center range-xs-middle section-34 section-md-top-145 section-md-bottom-100 section-lg-top-100 section-cover">
+                    <div class="range range-xs-center range-xs-middle section-100 section-md-top-145 section-md-bottom-100 section-lg-top-100 section-cover">
                         <div class="cell-xs-12">
-                            <h1 class="veil reveal-md-inline-block">
+                            <h1 class="reveal-md-inline-block">
                                 <?= EliveWidget::widget([
                                     'model' => $model,
                                     'attribute' => 'title',
