@@ -1,0 +1,21 @@
+<?php
+
+use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+/* @var $model app\models\repair_parts\RepairParts */
+
+$this->title = 'Редактирование запчасти: ' . $model->title;
+$this->params['breadcrumbs'][] = ['label' => 'Запчасти', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 'id' => $model->id]];
+$this->params['breadcrumbs'][] = 'Редактирование';
+?>
+<div class="repair-parts-update">
+
+
+
+    <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
+
+</div>
