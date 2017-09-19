@@ -5,8 +5,7 @@ namespace app\controllers;
 use Yii;
 use yii\web\Controller;
 use app\models\feedback\Feedback;
-use bot\Bot;
-use bot\ParseMode;
+
 class FeedbackController extends Controller
 {
     /**
