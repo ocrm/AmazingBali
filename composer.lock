@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2666e24bcd8b5cfa58591f18b9387796",
-    "content-hash": "1faed71f3e479af6b6b0b78e1e9b8ae0",
+    "hash": "eb49d95a6f195402b1a5d2d08c12a08d",
+    "content-hash": "080a73cb597320f8aa49c9aef480280e",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
@@ -1145,6 +1145,50 @@
                 "yii2"
             ],
             "time": "2017-04-12 09:00:24"
+        },
+        {
+            "name": "khoram/bot",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mehdikhody/bot.git",
+                "reference": "0d29108fef8a99b63e527c4f5610d2c49c127557"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mehdikhody/bot/zipball/0d29108fef8a99b63e527c4f5610d2c49c127557",
+                "reference": "0d29108fef8a99b63e527c4f5610d2c49c127557",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "bot\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mehdi Khodayari Khoram",
+                    "email": "mehdi.khodayari.khoram@gmail.com"
+                }
+            ],
+            "description": "Create free, easy and fast your telegram's bot.",
+            "keywords": [
+                "api",
+                "bots",
+                "extension",
+                "telegram",
+                "yii2"
+            ],
+            "time": "2017-08-29 19:44:42"
         },
         {
             "name": "liyunfang/yii2-upload-behavior",

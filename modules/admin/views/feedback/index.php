@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="panel-body">
             <? if($item->subject): ?>
                 <p><strong>Тур: </strong><?= Html::encode($item->subject) ?></p>
-                <p><strong>Дата тура: </strong><?= Html::encode(Yii::$app->formatter->asDate($item->tour_date, "php:d-m-Y")) ?></p>
+                <p><strong>Дата тура: </strong><?= Yii::$app->formatter->asDate($item->tour_date, "php:d-m-Y") ?></p>
             <? endif; ?>
             <p><strong>ФИО: </strong><?= Html::encode($item->name) ?></p>
             <p><strong>Телефон: </strong><?= Html::encode($item->phone) ?></p>

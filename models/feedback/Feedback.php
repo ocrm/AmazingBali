@@ -37,7 +37,9 @@ class Feedback extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone', 'tour_date'], 'required'],
+            [['name', 'phone', 'tour_date'], 'required', 'on' => 'full'],
+            [['name', 'phone'], 'required', 'on' => 'short'],
+            [['name', 'phone'], 'required', 'on' => 'contacts'],
             [['text'], 'string'],
             [['status'], 'integer'],
             [['phone', 'email', 'name', 'subject'], 'string', 'max' => 255],

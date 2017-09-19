@@ -7,6 +7,7 @@ use yii\jui\DatePicker;
     <?php $form = ActiveForm::begin([
         'options' => [
             'id' => 'request-form',
+            'data-form-type' => 'full'
         ]
     ]); ?>
 

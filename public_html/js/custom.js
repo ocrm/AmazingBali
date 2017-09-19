@@ -38,11 +38,20 @@ $(document).ready(function () {
     })();
 
     $("a[data-target='#booknow']").on('click', function () {
-        var subject = $(this).data('subject')
+        var formType = $(this).data('form-type');
+        var subject = $(this).data('subject');
         var target = $(this).data('target');
 
+        if(formType == 'full'){
+            yaCounter45722304.reachGoal('ORDER_B');
+        }
+
+        if(formType == 'short'){
+            yaCounter45722304.reachGoal('ORDER_T');
+        }
+
         $.ajax({
-            url: '/feedback/',
+            url: '/feedback/' + formType + "/",
             success: function(data) {
                 $( ".request-form" ).html( data );
                 $('.form-subject-header').html(subject);
@@ -56,6 +65,7 @@ $(document).ready(function () {
 
     $(document).on("beforeSubmit", "#request-form", function () {
         var form = $(this);
+        var formType = $(form).data('form-type');
         if(form.find('.has-error').length) {
             return false;
         }
@@ -66,10 +76,19 @@ $(document).ready(function () {
             data: form.serialize(),
 
             success: function(data) {
+
                 $('.request-form').html('<div class="request-complite">Спасибо, ваше сообщение отправлено</div>');
                 setTimeout(function () {
                     $('#booknow').modal('hide');
                 },2000);
+
+                if(formType == 'full'){
+                    yaCounter45722304.reachGoal('SENT_B');
+                }
+
+                if(formType == 'short'){
+                    yaCounter45722304.reachGoal('SENT_TOP');
+                }
             },
 
             error: function(){

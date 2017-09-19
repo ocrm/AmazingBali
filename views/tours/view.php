@@ -38,7 +38,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
                                 </h6>
                             </div>
                             <div class="offset-top-20 offset-md-top-40">
-                                <a href="<?= Url::to('#prices') ?>" class="btn btn-primary">БРОНИРОВАТЬ ТУР</a>
+                                <a href="#" data-subject="<?= $model->title ?>" data-target="#booknow" data-form-type="short" class="btn btn-primary">БРОНИРОВАТЬ ТУР</a>
                             </div>
                         </div>
                     </div>
@@ -291,7 +291,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
                                     </div>
                                 </div>
                             </div>
-                            <div class="offset-top-4"><a href="#" data-subject="<?= $model->title.' - '.$price->title ?>" data-target="#booknow" class="btn btn-block btn-primary">Оформить</a></div>
+                            <div class="offset-top-4"><a href="#" data-subject="<?= $model->title.' - '.$price->title ?>" data-target="#booknow" data-form-type="full" class="btn btn-block btn-primary">Оформить</a></div>
                         </div>
                     </div>
                 <? endforeach ?>

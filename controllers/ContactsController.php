@@ -29,6 +29,7 @@ class ContactsController extends Controller
     public function actionIndex()
     {
         $model = new Feedback();
+        $model->scenario = 'contacts';
         $page = Pages::findOne(self::PAGE_ID);
         if($page->status_id == Status::STATUS_INACTIVE){
             throw new NotFoundHttpException();
