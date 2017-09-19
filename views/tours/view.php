@@ -291,7 +291,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
                                     </div>
                                 </div>
                             </div>
-                            <div class="offset-top-4"><a href="#" data-subject="<?= $model->title.' - '.$price->title ?>" data-target="#booknow" data-form-type="full" class="btn btn-block btn-primary">Оформить</a></div>
+                            <div class="offset-top-4"><a href="#" data-subject="<?= $model->title.' - '.$price->title ?>" data-target="#booknow" data-form-type="full" class="btn btn-block btn-primary">Оставить заявку</a></div>
                         </div>
                     </div>
                 <? endforeach ?>
