@@ -21,7 +21,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
                 <div class="range">
                     <div class="range range-xs-center range-xs-middle section-100 section-md-top-145 section-md-bottom-100 section-lg-top-100 section-cover">
                         <div class="cell-xs-12">
-                            <h1 class="reveal-md-inline-block">
+                            <h1 class="reveal-md-inline-block" data-shadow="<?= $model->title ?>">
                                 <?= EliveWidget::widget([
                                     'model' => $model,
                                     'attribute' => 'title',
@@ -29,7 +29,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
                                 ]) ?>
                             </h1>
                             <div class="offset-top-4">
-                                <h6 class="text-italic">
+                                <h6 class="text-italic" data-shadow="<?= $model->short_description ?>">
                                     <?= EliveWidget::widget([
                                         'model' => $model,
                                         'attribute' => 'short_description',

@@ -201,11 +201,13 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
                 <div class="shell section-80 section-lg-top-145 section-lg-bottom-295">
                     <div class="range range-xs-center range-md-right text-md-right">
                         <div class="cell-sm-10 cell-md-7">
-                            <?= EliveWidget::widget([
-                                'model' => $page->parts[13],
-                                'attribute' => 'data',
-                                'controller' => 'pages'
-                            ]) ?>
+                            <div data-shadow="<?= strip_tags($page->parts[13]->data) ?>">
+                                <?= EliveWidget::widget([
+                                    'model' => $page->parts[13],
+                                    'attribute' => 'data',
+                                    'controller' => 'pages'
+                                ]) ?>
+                            </div>
                             <div class="offset-top-30 offset-md-top-40"><?= Html::a('Найдите свой идеальный тур', ['/tours/index'], ['class' => 'btn btn-primary']) ?></div>
                         </div>
                     </div>
@@ -302,11 +304,13 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
                 <div class="shell section-80 section-lg-top-145 section-lg-bottom-295">
                     <div class="range range-xs-center range-md-left text-md-left">
                         <div class="cell-sm-10 cell-md-7">
+                            <div data-shadow="<?= strip_tags($page->parts[14]->data) ?>">
                             <?= EliveWidget::widget([
-                                'model' => $page->parts[13],
+                                'model' => $page->parts[14],
                                 'attribute' => 'data',
                                 'controller' => 'pages'
                             ]) ?>
+                            </div>
                             <div class="offset-top-30 offset-md-top-40"><?= Html::a('Найти свой тур', ['/tours/index'], ['class' => 'btn btn-primary']) ?></div>
                         </div>
                     </div>

@@ -16,18 +16,22 @@ use yii\helpers\Url;
             <div class="range range-xs-center">
                 <div class="cell-lg-10">
                     <div>
-                        <?= EliveWidget::widget([
-                            'model' => $widget->widgetData[0],
-                            'attribute' => 'data',
-                            'controller' => 'widgets'
-                        ]) ?>
+                        <div class="text-white" data-shadow="<?= strip_tags($widget->widgetData[0]->data) ?>">
+                            <?= EliveWidget::widget([
+                                'model' => $widget->widgetData[0],
+                                'attribute' => 'data',
+                                'controller' => 'widgets'
+                            ]) ?>
+                        </div>
                     </div>
                     <div class="offset-top-8">
+                        <div class="h6 text-white" data-shadow="<?= strip_tags($widget->widgetData[0]->data) ?>">
                             <?= EliveWidget::widget([
                                 'model' => $widget->widgetData[1],
                                 'attribute' => 'data',
                                 'controller' => 'widgets'
                             ]) ?>
+                        </div>
                     </div>
                     <div class="offset-top-30 offset-md-top-60 inset-left-20 inset-right-20 inset-sm-left-0 inset-sm-right-0">
                         <a href="<?= Url::to(['tours/index']) ?>" class="btn btn-primary">Посмотреть все Туры</a>

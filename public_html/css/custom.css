@@ -143,3 +143,21 @@
     margin: 20px 0px !important;
   }
 }
+[data-shadow] {
+  position: relative;
+  display: inline-block;
+}
+[data-shadow]:before {
+  content: attr(data-shadow);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: black;
+  filter: blur(80px);
+  z-index: -1;
+  color: black;
+  padding: 40px;
+  margin: -40px;
+}
