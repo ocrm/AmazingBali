@@ -78,6 +78,9 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
                             <div class="box-offer box-offer-xs">
                                 <div class="box-offer-img-wrap">
                                     <a href="<?= Url::to(['tours/view', 'slug' => $item->slug]) ?>">
+                                        <div class="read-more-overlay">
+                                            <div class="read-more-btn">подробнее</div>
+                                        </div>
                                         <img src="<?= $item->getThumbUploadUrl('tour_img') ?>" width="270" height="240" alt="" class="img-responsive center-block">
                                         <div class="hot-label-container">
                                             <? if ($item->hit): ?>
