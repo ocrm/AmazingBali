@@ -73,6 +73,7 @@ class ToursController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
 
+            $model->type_id = implode(",", ($model->type_id) ? $model->type_id : []);
             $model->save();
 
             return $this->redirect(['view', 'id' => $model->id]);
@@ -93,10 +94,13 @@ class ToursController extends Controller
     {
         $model = $this->findModel($id);
         $model->setScenario('update');
+        $model->type_id = explode(',', $model->type_id);
 
         if ($model->load(Yii::$app->request->post())) {
-            
+
+            $model->type_id = implode(",", ($model->type_id) ? $model->type_id : []);
             $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
 
         } else {

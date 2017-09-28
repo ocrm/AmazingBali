@@ -19,7 +19,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
         <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
             <div class="bg-overlay-darker">
                 <div class="shell section-100 section-md-100 section-lg-top-170 section-lg-bottom-165">
-                    <h1 class="reveal-md-inline-block" data-shadow="<?= strip_tags($page->parts[0]->data) ?>">
+                    <h1 class="reveal-md-inline-block">
                         <?= EliveWidget::widget([
                             'model' => $page->parts[0],
                             'attribute' => 'data',
@@ -27,7 +27,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
                         ]) ?>
                     </h1>
                     <div class="offset-top-4">
-                        <h6 data-shadow="<?= strip_tags($page->parts[14]->data) ?>" class="text-italic"><?= count($model) ?> туров найдено</h6>
+                        <h6 class="text-italic"><?= count($model) ?> туров найдено</h6>
                     </div>
                 </div>
             </div>

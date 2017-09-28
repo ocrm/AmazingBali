@@ -16,7 +16,7 @@ use yii\helpers\Url;
             <div class="range range-xs-center">
                 <div class="cell-lg-10">
                     <div>
-                        <div class="text-white" data-shadow="<?= strip_tags($widget->widgetData[0]->data) ?>">
+                        <div class="text-white">
                             <?= EliveWidget::widget([
                                 'model' => $widget->widgetData[0],
                                 'attribute' => 'data',
@@ -25,7 +25,7 @@ use yii\helpers\Url;
                         </div>
                     </div>
                     <div class="offset-top-8">
-                        <div class="h6 text-white" data-shadow="<?= strip_tags($widget->widgetData[0]->data) ?>">
+                        <div class="h6 text-white">
                             <?= EliveWidget::widget([
                                 'model' => $widget->widgetData[1],
                                 'attribute' => 'data',

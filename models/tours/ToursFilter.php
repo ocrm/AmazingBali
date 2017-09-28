@@ -45,7 +45,7 @@ class ToursFilter extends Tours
     public function filter($params)
     {
         $query = Tours::find()->andFilterWhere(['status_id' => Status::STATUS_ACTIVE]);
-        
+
         $this->load($params);
 
         if (!$this->validate()) {
@@ -57,16 +57,21 @@ class ToursFilter extends Tours
         $query->andFilterWhere([
             'destination_id' => $this->destination_id,
         ]);
-        
-        $query->andFilterWhere(['in', 'type_id', $this->type_id]);
+
+        if ($this->type_id) {
+            foreach ($this->type_id as $type) {
+                $query->andWhere('FIND_IN_SET("' . $type . '",`tours`.`type_id`)');
+            }
+            //$query->andWhere('FIND_IN_SET("' . $type . '",`tours`.`type_id`)');
+        }
         $query->andFilterWhere(['between', 'new_price', $this->new_price[0], $this->new_price[1]]);
 
         if($this->sort == 'newest'){
-            
+
             $query->orderBy(['id' => SORT_DESC]);
             
         }elseif ($this->sort == 'popularity'){
-            
+
             $query->orderBy(['stars' => SORT_DESC]);
             
         }else{

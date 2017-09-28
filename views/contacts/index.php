@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div data-speed="0" data-type="html" data-md-fade="false" class="rd-parallax-layer">
             <div class="bg-overlay-darker">
                 <div class="shell section-100 section-md-100 section-lg-top-170 section-lg-bottom-165">
-                    <h1 class="reveal-md-inline-block" data-shadow="<?= $page->parts[0]->data ?>">
+                    <h1 class="reveal-md-inline-block">
                         <?= EliveWidget::widget([
                             'model' => $page->parts[0],
                             'attribute' => 'data',
@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         ]) ?>
                     </h1>
                     <div class="offset-top-4">
-                        <h6 class="text-italic" data-shadow="<?= $page->parts[1]->data ?>">
+                        <h6 class="text-italic">
                             <?= EliveWidget::widget([
                                 'model' => $page->parts[1],
                                 'attribute' => 'data',

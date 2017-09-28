@@ -201,7 +201,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
                 <div class="shell section-80 section-lg-top-145 section-lg-bottom-295">
                     <div class="range range-xs-center range-md-right text-md-right">
                         <div class="cell-sm-10 cell-md-7">
-                            <div data-shadow="<?= strip_tags($page->parts[13]->data) ?>">
+                            <div>
                                 <?= EliveWidget::widget([
                                     'model' => $page->parts[13],
                                     'attribute' => 'data',
@@ -304,7 +304,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
                 <div class="shell section-80 section-lg-top-145 section-lg-bottom-295">
                     <div class="range range-xs-center range-md-left text-md-left">
                         <div class="cell-sm-10 cell-md-7">
-                            <div data-shadow="<?= strip_tags($page->parts[14]->data) ?>">
+                            <div>
                             <?= EliveWidget::widget([
                                 'model' => $page->parts[14],
                                 'attribute' => 'data',

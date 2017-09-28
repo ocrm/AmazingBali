@@ -90,11 +90,12 @@ class Tours extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['status_id', 'type_id', 'sort', 'stars', 'popular', 'hit', 'sale', 'duration_type', 'duration_time', 'destination_id'], 'integer'],
+            [['status_id', 'sort', 'stars', 'popular', 'hit', 'sale', 'duration_type', 'duration_time', 'destination_id'], 'integer'],
             [['new_price', 'old_price'], 'double'],
             [['long_description', 'program_description'], 'string'],
             [['meta_title', 'meta_keywords', 'meta_description', 'title', 'short_description', 'short_program', 'slug', 'duration', 'places'], 'string', 'max' => 255],
             [['tour_img'], 'file', 'maxFiles' => 1, 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'on' => ['create', 'update']],
+            [['type_id'], 'safe']
 
         ];
     }

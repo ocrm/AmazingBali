@@ -5,9 +5,7 @@ use yii\widgets\ActiveForm;
 use app\models\Status;
 use app\models\tours\ToursType;
 use app\models\destination\Destination;
-use yii\jui\DatePicker;
-use yii\grid\GridView;
-use yii\widgets\Pjax;
+use kartik\select2\Select2;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\tours\Tours */
@@ -36,7 +34,16 @@ use yii\widgets\Pjax;
     </div>
 
     <div class="col-md-4">
-        <?= $form->field($model, 'type_id')->dropDownList(ToursType::typeArray()) ?>
+        <?
+        echo $form->field($model, 'type_id')->widget(Select2::classname(), [
+            'data' => ToursType::typeArray(),
+            'options' => ['placeholder' => 'Выберите категорию ...'],
+            'pluginOptions' => [
+                'allowClear' => true,
+                'multiple' => true
+            ],
+        ]);
+        ?>
     </div>
 
     <div class="col-md-12">
