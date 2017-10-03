@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use yii\web\Controller;
 use app\models\feedback\Feedback;
+use app\components\SendMail;
 
 class FeedbackController extends Controller
 {
@@ -28,6 +29,7 @@ class FeedbackController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $model->tour_date = Yii::$app->formatter->asDate($model->tour_date, "php:Y-m-d  H:i:s");
             $model->save();
+            SendMail::send($model);
         }
 
         return $this->renderAjax('full', [
@@ -43,6 +45,7 @@ class FeedbackController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             $model->save();
+            SendMail::send($model);
         }
 
         return $this->renderAjax('short', [

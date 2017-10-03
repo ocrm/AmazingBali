@@ -12,7 +12,6 @@
 .contacts-header{
   text-align: right;
   position: fixed;
-  height: 25px;
   width: 100%;
   z-index: 2;
   background-color: #000;
@@ -26,7 +25,7 @@
       color: #969696;
       display: inline-block;
       padding: 4px;
-      background-color: #1b1b1b;
+      background-color: #525252;;
       border-radius: 2px;
       font-size: 12px;
     }
@@ -131,12 +130,13 @@
 
   figure.image[style*="left"]  {margin:15px 20px 15px 0;}
   figure.image[style*="right"] {margin:15px 0 20px 15px;}
-
-  @media (max-width: 600px) {
-    img {
-      width: 100% !important;
-      height: auto !important;
-      margin: 20px 0px !important;
+  &:not(.img-fixed) {
+    @media (max-width: 600px) {
+      img {
+        width: 100% !important;
+        height: auto !important;
+        margin: 20px 0px !important;
+      }
     }
   }
 }
@@ -163,6 +163,9 @@
 }
 
 //Кнопка подробнее на карточке предложения
+.box-offer-img-wrap{
+  position: relative;
+}
 .read-more-overlay{
   position: absolute;
   background-color: rgba(0,0,0,0.6);

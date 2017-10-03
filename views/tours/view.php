@@ -247,7 +247,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
             <div class="range range-xs-center offset-top-45">
                 <? foreach ($model->activePrices as $price): ?>
                     <div class="cell-xs-8 cell-sm-5 cell-md-3 offset-top-50 offset-sm-top-0">
-                        <div class="box-pricing <?= ($price->top) ? 'active' : '' ?>">
+                        <div class="box-pricing<?= ($price->top) ? ' active' : '' ?>">
                             <div class="box-pricing-inner">
                                 <div class="box-pricing-label">
                                     <svg viewbox="0 0 86 86" class="box-pricing-svg">
@@ -275,6 +275,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
                                             'model' => $price,
                                             'attribute' => 'description',
                                             'controller' => 'tours-price',
+                                            'className' => 'img-fixed'
                                         ]) ?>
                                     </div>
                                 </div>

@@ -41,7 +41,7 @@ class ToursSearch extends Tours
      */
     public function search($params)
     {
-        $query = Tours::find();
+        $query = Tours::find()->orderBy(['sort' => SORT_DESC]);
 
         // add conditions that should always apply here
 

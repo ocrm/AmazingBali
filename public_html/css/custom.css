@@ -10,7 +10,6 @@
 .contacts-header {
   text-align: right;
   position: fixed;
-  height: 25px;
   width: 100%;
   z-index: 2;
   background-color: #000;
@@ -28,7 +27,7 @@
   color: #969696;
   display: inline-block;
   padding: 4px;
-  background-color: #1b1b1b;
+  background-color: #525252;
   border-radius: 2px;
   font-size: 12px;
 }
@@ -137,7 +136,7 @@
   margin: 15px 0 20px 15px;
 }
 @media (max-width: 600px) {
-  .live-edit img {
+  .live-edit:not(.img-fixed) img {
     width: 100% !important;
     height: auto !important;
     margin: 20px 0px !important;
@@ -160,6 +159,9 @@
   color: black;
   padding: 40px;
   margin: -40px;
+}
+.box-offer-img-wrap {
+  position: relative;
 }
 .read-more-overlay {
   position: absolute;

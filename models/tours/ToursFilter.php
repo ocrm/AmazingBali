@@ -76,7 +76,7 @@ class ToursFilter extends Tours
             
         }else{
             
-            $query->orderBy(['sort' => SORT_ASC]);
+            $query->orderBy(['sort' => SORT_DE]);
             
         }
 

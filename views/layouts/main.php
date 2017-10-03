@@ -53,6 +53,7 @@ $parts = PageParts::find()->where(['page_id' => 9])->all();
     <?php $this->head() ?>
     <!— Yandex.Metrika counter —> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter45722304 = new Ya.Metrika({ id:45722304, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45722304" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!— /Yandex.Metrika counter —>
     <!— Facebook Pixel Code —> <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '113567879339745'); fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=113567879339745&ev=PageVie.." /></noscript> <!— End Facebook Pixel Code —>
+    <!— Vk Pixel Code —> <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-166412-3U4Z2';</script> <!— End Vk Pixel Code —>
     <!— BEGIN JIVOSITE CODE {literal} —>
     <script type='text/javascript'>
         (function(){ var widget_id = 'lx6k7W6YbO';var d=document;var w=window;function l(){
@@ -69,6 +70,12 @@ $parts = PageParts::find()->where(['page_id' => 9])->all();
                     <?= SocialWidget::widget() ?>
                     <?= EliveWidget::widget([
                         'model' => $parts[0],
+                        'attribute' => 'data',
+                        'controller' => 'pages',
+                        'className' => 'phone'
+                    ]) ?>
+                    <?= EliveWidget::widget([
+                        'model' => $parts[13],
                         'attribute' => 'data',
                         'controller' => 'pages',
                         'className' => 'phone'

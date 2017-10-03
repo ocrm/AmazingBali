@@ -9,6 +9,7 @@ use app\models\Status;
 use app\models\pages\Pages;
 use yii\web\NotFoundHttpException;
 use app\models\feedback\Feedback;
+use app\components\SendMail;
 class ContactsController extends Controller
 {
 
@@ -36,6 +37,7 @@ class ContactsController extends Controller
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            SendMail::send($model);
             return $this->render('index', [
                 'page' => $page,
                 'model' => $model,

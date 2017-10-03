@@ -68,7 +68,7 @@ class ToursController extends Controller
         }
         
         $countQuery = clone $query;
-        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 25]);
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => 50]);
         $model = $query->offset($pages->offset)
             ->limit($pages->limit)
             ->all();

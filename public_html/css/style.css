@@ -23131,7 +23131,7 @@ html .page .offset-top-530 {
 }
 .box-pricing-label {
   display: none;
-  z-index: 2;
+  z-index: 1;
   color: #fff;
 }
 .box-pricing-label span {

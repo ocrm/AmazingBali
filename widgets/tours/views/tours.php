@@ -25,10 +25,18 @@ use app\widgets\elive\EliveWidget;
             <? foreach ($model as $item): ?>
                 <div class="cell-sm-5 cell-md-4 offset-top-30">
                 <div data-wow-delay=".2s" class="box-offer wow bounceIn">
-                    <div class="box-offer-img-wrap"><a href="<?= Url::to(['tours/view', 'slug' => $item->slug]) ?>"><img src="<?= $item->getThumbUploadUrl('tour_img') ?>" width="370" height="310" alt="" class="img-responsive center-block"></a></div>
+                    <div class="box-offer-img-wrap">
+                        <a href="<?= Url::to(['tours/view', 'slug' => $item->slug]) ?>">
+                            <div class="read-more-overlay">
+                                <div class="read-more-btn">подробнее</div>
+                            </div>
+                            <img src="<?= $item->getThumbUploadUrl('tour_img') ?>" width="370" height="310" alt="" class="img-responsive center-block">
+                        </a>
+                    </div>
                     <div class="box-offer-caption text-left">
                         <div class="pull-left">
-                            <div class="box-offer-title text-ubold"><a href="<?= Url::to(['tours/view', 'slug' => $item->slug]) ?>" class="text-gray-base">
+                            <div class="box-offer-title text-ubold">
+                                <a href="<?= Url::to(['tours/view', 'slug' => $item->slug]) ?>" class="text-gray-base">
                                     <?= EliveWidget::widget([
                                         'model' => $item,
                                         'attribute' => 'title',
