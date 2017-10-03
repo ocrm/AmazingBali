@@ -19,7 +19,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'https://fonts.googleapis.com/css?family=Arsenal|Comfortaa|Neucha|Open+Sans+Condensed:300',
-        'css/main.css?v=2',
+        'css/main.css?v=4',
         'css/paymentfont.css',
         'css/social.css'
     ];

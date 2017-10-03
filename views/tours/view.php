@@ -389,7 +389,9 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
             <div data-items="1" data-start-position="-5" data-sm-items="2" data-stage-padding="5" data-loop="false" data-margin="30" data-mouse-drag="false" data-dots="false" data-nav="false" class="owl-carousel owl-carousel-sm owl-navs-offset-0 owl-dots-primary owl-nav-alabaster list-inline-dashed-vertival">
 
                 <div class="owl-item">
-                    <div class="next-tour" style="background-image: url(<?=$prev->getThumbUploadUrl('tour_img')?>)"></div>
+                    <a href="<?= Url::to(['tours/view', 'slug' => $prev->slug]) ?>">
+                        <div class="next-tour" style="background-image: url(<?=$prev->getThumbUploadUrl('tour_img')?>)"></div>
+                    </a>
                     <div>
                         <p class="text-extra-small text-silver-chalice text-italic text-uppercase text-spacing-200">Предыдущий Тур</p>
                     </div>
@@ -399,7 +401,9 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
                 </div>
 
                 <div class="owl-item">
-                    <div class="next-tour" style="background-image: url(<?=$next->getThumbUploadUrl('tour_img')?>)"></div>
+                    <a href="<?= Url::to(['tours/view', 'slug' => $next->slug]) ?>" class="text-gray-base">
+                        <div class="next-tour" style="background-image: url(<?=$next->getThumbUploadUrl('tour_img')?>)"></div>
+                    </a>
                     <div>
                         <p class="text-extra-small text-silver-chalice text-italic text-uppercase text-spacing-200">Следующий Тур</p>
                     </div>

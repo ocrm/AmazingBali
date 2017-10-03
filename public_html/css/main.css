@@ -33847,6 +33847,17 @@ html .page footer .offset-top-110 {
   border-radius: 100%;
   background-position: center;
   background-size: cover;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.next-tour:hover {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  transform: scale(0.95);
 }
 .association {
   display: inline-block;
