@@ -84,7 +84,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $page->meta_keywords]
                                         <img src="<?= $item->getThumbUploadUrl('tour_img') ?>" width="270" height="240" alt="" class="img-responsive center-block">
                                         <div class="hot-label-container">
                                             <? if ($item->hit): ?>
-                                                <div class="hot-label hit">HIT</div>
+                                                <div class="hot-label hit">ПОПУЛЯРНО</div>
                                             <? endif; ?>
                                             <? if ($item->sale): ?>
                                                 <div class="hot-label sale">SALE %</div>

@@ -33842,8 +33842,8 @@ html .page footer .offset-top-110 {
 }
 .next-tour {
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
   background-position: center;
   background-size: cover;
@@ -33938,4 +33938,9 @@ html .page footer .offset-top-110 {
 }
 .read-more-btn:hover {
   background-color: #5f9536;
+}
+@media (max-width: 600px) {
+  #jivo-iframe-container {
+    visibility: hidden !important;
+  }
 }
