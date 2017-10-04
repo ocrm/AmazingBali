@@ -78,7 +78,7 @@ $parts = PageParts::find()->where(['page_id' => 9])->all();
                         'model' => $parts[12],
                         'attribute' => 'data',
                         'controller' => 'pages',
-                        'className' => 'phone'
+                        'className' => 'phone hidden'
                     ]) ?>
                     <?= EliveWidget::widget([
                         'model' => $parts[10],
