@@ -59,7 +59,7 @@ class ToursController extends Controller
         
         if($type_id){
             
-            $query = Tours::find()->where('FIND_IN_SET("'.$type_id.'",`tours`.`type_id`)');
+            $query = Tours::find()->where('FIND_IN_SET("'.$type_id.'",`tours`.`type_id`)')->andWhere(['status_id' => Status::STATUS_ACTIVE]);
             
         }else{
             
